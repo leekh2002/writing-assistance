@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "chart.js": "^4.4.6",
+    "dotenv": "^16.4.5",
+    "echarts": "^5.5.1",
+    "express": "^4.19.2",
+    "express-session": "^1.18.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.11.0",
+    "node-cron": "^3.0.3",
+    "openai": "^4.71.1",
+    "socket.io": "^4.8.1",
+    "suneditor": "^2.47.0"
+  }
+}

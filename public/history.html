@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>history</title>
+    <style>
+      body {
+        height: 100vh;  /* 페이지 높이를 화면 전체로 설정 */
+        background-image: url('./images/background.png'); /* 배경 이미지 설정 */
+        background-size: cover; /* 배경 이미지 크기 설정 */
+        background-repeat: no-repeat; /* 배경 이미지 반복 방지 */
+        background-position: center;  /* 배경 이미지 가운데 정렬 */
+        font-family: 'Arial', sans-serif; /* 글꼴 설정 */
+        background-color: #f4f4f4;  /* 배경색 설정 */
+        margin: 0;  /* 기본 마진 제거 */
+        padding: 20px;  /* 페이지 여백 설정 */
+        color: #333;  /* 글자 색 설정 */
+      }
+
+      /* 제목 스타일 */
+      h1 {
+        text-align: center; /* 제목을 중앙 정렬 */
+        color: #4caf50; /* 제목 글자 색 설정 */
+      }
+    </style>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./js/history.js" defer></script>
+
+    <!-- Chart.js 라이브러리 연결 (차트 생성용) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- 카테고리 선택 드롭다운 -->
+      <label for="category">카테고리 선택:</label>
+      <select id="category">
+        <option value="전체">전체</option>
+        <option value="인문학">인문학</option>
+        <option value="사회과학">사회과학</option>
+        <option value="자연과학">자연과학</option>
+      </select>
+
+      <!-- 문제 목록을 표시할 영역 -->
+      <div class="problems"></div>
+
+      <div class="charts">
+        <!-- 작성한 글 수를 나타내는 차트 영역 -->
+        <div class="problem-count-chart-section">
+          <h2>작성한 글 수</h2>
+          <!-- 작성한 글 수를 시각적으로 표시할 차트 캔버스 -->
+          <canvas id="problem-count-chart" width="20" height="20"></canvas>
+          
+          <!-- 총합 점수를 표시할 레이블 -->
+          <span class="sum-score-label">총합: </span>
+          <span class="sum-score"></span> <!-- 실제 점수가 들어갈 자리 -->
+        </div>
+
+        <!-- 평균 점수를 나타내는 차트 영역 -->
+        <div class="score-average-chart-section">
+          <h2>평균 점수</h2>
+          
+          <!-- 평균 점수를 시각적으로 표시할 차트 캔버스 -->
+          <canvas id="score-average-chart" width="20" height="20"></canvas>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

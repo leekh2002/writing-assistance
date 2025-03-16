@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign up</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="./js/signup.js" defer></script>
+  <style>
+
+    /* 페이지 body 스타일 설정 */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('./images/background.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <h2>Sign Up</h2>
+
+    <!-- 회원가입 폼 -->
+    <form action="/process/signup" method="POST">
+
+       <!-- 사용자 이름 입력 필드 -->
+      <div class="input-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+
+      <!-- 비밀번호 입력 필드 -->
+      <div class="input-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+
+      <!-- 비밀번호 확인 입력 필드 -->
+      <div class="input-group">
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+      </div>
+
+      <!-- 제출 버튼 -->
+      <button style="float: right;" type="submit">Sign Up</button>
+    </form>
+  </div>
+</body>
+</html>

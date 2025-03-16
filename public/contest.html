@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width" , initial-scale="1" />
+
+     <!-- 스타일시트 링크 -->
+    <link rel="stylesheet" href="css/bootstrap.css" />  <!-- 부트스트랩 CSS -->
+    <link rel="stylesheet" href="css/suneditor.min.css" />   <!-- SunEditor 스타일시트 -->
+    <link rel="stylesheet" href="styles.css" /> <!-- 커스텀 스타일시트 -->
+
+    <!-- 외부 스타일시트 CDN 연결 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />  <!-- 부트스트랩 5 스타일시트 -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />  <!-- 구글 머티리얼 아이콘 -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />  <!-- 부트스트랩 4 스타일시트 -->
+
+    <script src="./js/contest.js" defer></script>
+
+     <!-- SunEditor 및 jQuery 파일 -->
+    <script type="text/javascript" src="js/suneditor.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+
+     <!-- SunEditor 초기화 스크립트 -->
+    <script type="text/javascript">
+      $(function () {
+        // SunEditor 에디터 초기화
+        SUNEDITOR.create('content', {
+          font: ['Arial', 'tahoma', 'Courier New,Courier'], // 폰트 설정
+          fontSize: [8, 10, 14, 18, 24, 36],  // 글자 크기 설정
+          colorList: [  // 색상 리스트 설정
+            [
+              '#ccc',
+              '#dedede',
+              'OrangeRed',
+              'Orange',
+              'RoyalBlue',
+              'SaddleBrown',
+            ],
+            [
+              'SlateGray',
+              'BurlyWood',
+              'DeepPink',
+              'FireBrick',
+              'Gold',
+              'SeaGreen',
+            ],
+          ],
+          width: '100%',  // 에디터 너비 설정
+          maxWidth: '600px',  // 최대 너비 설정
+          minWidth: 400,  // 최소 너비 설정
+          height: 'auto', // 높이 자동 설정
+          imageWidth: 150,  // 이미지의 최대 너비 설정
+          popupDisplay: 'local',  // 팝업 디스플레이 방식 설정
+          resizingBar: false, // 크기 조절 바 비활성화
+          buttonList: [ // 툴바 버튼 리스트 설정
+            [
+              'font',
+              'fontSize',
+              'bold',
+              'underline',
+              'fontColor',
+              'hiliteColor',
+            ],
+          ],
+          callBackSave: function (contents) {
+            alert(contents);
+          },
+        });
+      });
+    </script>
+
+    <!-- 부트스트랩 자바스크립트 파일 링크 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <!-- 헤더 섹션 -->
+    <header class="header">
+      <div class="title"></div>
+    </header>
+
+    <div class="content">
+      <!-- 글쓰기 가이드 섹션 -->
+      <div class="col-lg-6 guide-section"></div>
+
+      <!-- 글쓰기 섹션 -->
+      <div class="col-lg-6 write-section">
+        <textarea
+          class="form-control"
+          id="content"
+          placeholder="글 내용"
+          name="content"
+          maxlength="2048"
+          style="height: 600px"
+        ></textarea>
+        <!-- 제출 버튼 -->
+        <button class="submit">제출</button>
+      </div>
+    </div>
+
+    <!-- 타이머 섹션 -->
+    <div class="timer-section">
+      <span>종료까지</span><span class="time"></span> <!-- 남은 시간 표시 -->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problem List</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./js/home.js" defer></script>
+    <style>
+
+      /* body 스타일 설정: 화면 중앙에 콘텐츠 배치 */
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-image: url('./images/background.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="link-container">
+      <!-- 글 작성하기 링크: select_category.html로 이동 -->
+      <a href="./select_category.html" id="write"
+        ><img
+          src="./images/write.png"
+          style="width: 30px; height: 30px; float: left"
+          alt="history"
+        />글 작성하기</a
+      >
+
+      <!-- 히스토리 링크: history.html로 이동 -->
+      <a href="./history.html" id="history"
+        ><img
+          src="./images/history.png"
+          style="width: 30px; height: 30px; float: left"
+          alt="history"
+        />히스토리</a
+      >
+
+      <!-- 콘테스트 링크: contest_home.html로 이동 -->
+      <a href="./contest_home.html" id="contest"
+        ><img
+          src="./images/contest.png"
+          style="width: 30px; height: 30px; float: left"
+          alt="contest"
+        />콘테스트</a
+      >
+    </div>
+  </body>
+</html>

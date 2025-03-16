@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./js/login.js" defer></script>
+    <style>
+      /* body 스타일 설정: 화면 중앙에 로그인 폼 배치 */
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-image: url('./images/background.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Login</h2>
+
+      <!-- 로그인 폼 -->
+      <form action="/login" method="post">
+
+        <!-- 사용자 이름 입력 그룹 -->
+        <div class="input-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+
+        <!-- 비밀번호 입력 그룹 -->
+        <div class="input-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+
+        <!-- 회원가입 링크 -->
+        <a href="signup.html">Sign up</a>
+
+        <!-- 로그인 버튼 -->
+        <button style="float: right" type="submit">Login</button>
+      </form>
+    </div>
+  </body>
+</html>
