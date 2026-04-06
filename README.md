@@ -63,19 +63,21 @@ http://localhost:3000/public/index.html
 
 문제 제목과 안내문을 확인한 뒤 에디터에서 글을 작성하고 제출할 수 있습니다.
 
-![글 작성 페이지](./글작성페이지UI.png)
+<img width="999" height="548" alt="Image" src="https://github.com/user-attachments/assets/8176d85b-edc8-466a-b000-15c10b7582d0" />
 
 ### 피드백 결과 페이지
 
 제출한 글에 대한 종합 점수와 항목별 AI 피드백을 확인할 수 있습니다.
 
-![피드백 결과 페이지](./피드백결과페이지.png)
+
+<img width="988" height="557" alt="Image" src="https://github.com/user-attachments/assets/24a42fb5-8e29-4dae-9ff8-09d6d36f60ce" />
 
 ### 히스토리 페이지
 
 카테고리별 작성 기록과 평균 점수, 전체 작성 수를 차트로 확인할 수 있습니다.
 
-![히스토리 페이지](./히스토리페이지.png)
+
+<img width="808" height="637" alt="Image" src="https://github.com/user-attachments/assets/cb076495-5eee-411c-b381-dff2053c83b8" />
 
 ## 디렉터리 구조
 
